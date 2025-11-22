@@ -228,12 +228,14 @@ to improve reproducibility of the reported results.
 
 If you use this code in your research, please cite the manuscript:
 
+```bibtex
 @article{metin2024soilP_GCN,
   author  = {Metin, Neslihan Pelin and Panahi, Nazila and Cimtay, Yucel},
   title   = {Investigating the Use of Graph Convolutional Networks on Soil Phosphorus Estimation from Hyperspectral Sensor Data},
-  year    = {2024},
+  year    = {2025},
   journal = {to appear}
 }
+```
 
 You may also want to cite the original dataset paper by Rivadeneira-Bolaños et al.
 
