@@ -48,7 +48,7 @@ They are included here **only for academic and reproducibility purposes**, and a
 ├── FosforCNN_GridSearch.py
 ├── FosforCNN_BestConfig.py
 ├── plot_spectral_figures.py
-├── dataset_statistics_and_pca.py
+├── statistics_of_data_and_pca.py
 ├── selected_band_indices.txt
 ├── data.xlsx
 ├── labels.xlsx
@@ -119,7 +119,7 @@ They are included here **only for academic and reproducibility purposes**, and a
 
   All plots are saved to the spectral_plots/ folder.
 
-- dataset_statistics_and_pca.py  
+- statistics_of_data_and_pca.py  
   Script that computes and visualizes dataset-level statistics and exploratory plots:
 
   - descriptive statistics of the phosphorus labels, saved as  
@@ -206,7 +206,7 @@ the second trains the final CNN model and generates evaluation plots.
 To generate the dataset description figures used in the manuscript:
 
 python plot_spectral_figures.py
-python dataset_statistics_and_pca.py
+python statistics_of_data_and_pca.py
 
 All resulting plots and Excel tables will be saved into  
 spectral_plots/ and dataset_stats_plots/.
