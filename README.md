@@ -41,7 +41,7 @@ They are included here **only for academic and reproducibility purposes**, and a
 ---
 
 ## Repository structure
-
+```text
 .
 ├── FosforGNN_GridSearch.py
 ├── FosforGNN_Seed.py
@@ -53,6 +53,7 @@ They are included here **only for academic and reproducibility purposes**, and a
 ├── data.xlsx
 ├── labels.xlsx
 └── requirements.txt
+```
 
 
 ### GCN code
@@ -150,7 +151,8 @@ It is recommended to use a virtual environment:
 
 python -m venv venv
 source venv/bin/activate      # on Linux/macOS
-# venv\Scriptsctivate       # on Windows
+
+venv\Scripts\activate       # on Windows
 
 pip install -r requirements.txt
 
