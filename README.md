@@ -43,16 +43,16 @@ They are included here **only for academic and reproducibility purposes**, and a
 ## Repository structure
 ```text
 .
+├── FosforGNN_BestMetrics&Plots.py
 ├── FosforGNN_GridSearch.py
-├── FosforGNN_Seed.py
+├── FosforCNN_BestMetrics&Plots.py
 ├── FosforCNN_GridSearch.py
-├── FosforCNN_BestConfig.py
-├── plot_spectral_figures.py
-├── statistics_of_data_and_pca.py
-├── selected_band_indices.txt
 ├── data.xlsx
 ├── labels.xlsx
-└── requirements.txt
+├── plot_spectral_figures.py
+├── requirements.txt
+├── selected_band_indices.txt
+└── statistics_of_data_and_pca.py
 ```
 
 
@@ -71,18 +71,12 @@ They are included here **only for academic and reproducibility purposes**, and a
   - evaluates each hyperparameter combination with validation and test R²,  
   - logs the results to a text file (e.g. gnn_training_log.txt).
 
-- FosforGNN_Seed.py  
-  Training script for the **single best GCN configuration** reported in the manuscript.  
-
-  It:
-
-  - fixes all random seeds for reproducibility,  
-  - trains the selected GCN on each fold,  
-  - saves training/validation loss curves,  
-  - saves measured vs. predicted scatter plots and residual plots  
-    for validation and test data of each fold (figures used in the manuscript).
-
-### CNN baseline code
+- FosforGNN_BestMetrics&Plots.py  
+  Training script for the **best GNN configuration**.  
+  It trains the final GNN model and generates prediction and residual plots,
+  analogous to the CCN figures, for direct comparison.
+  
+### CNN code
 
 - FosforCNN_GridSearch.py  
   Hyperparameter grid search for the 1D CNN baseline.  
@@ -93,7 +87,7 @@ They are included here **only for academic and reproducibility purposes**, and a
     (e.g. number of channels, kernel size, dropout, learning rate),  
   - reports validation and test R² for each configuration.
 
-- FosforCNN_BestConfig.py  
+- FosforCNN_BestMetrics&Plots.py  
   Training script for the **best CNN configuration**.  
   It trains the final CNN model and generates prediction and residual plots,
   analogous to the GCN figures, for direct comparison.
@@ -173,7 +167,7 @@ The repository already contains:
 If you cloned the repository as-is, no extra data preparation is required.  
 
 
-### 2. Reproducing the GCN grid search
+### 2. Reproducing the GCN baseline
 
 python FosforGNN_GridSearch.py
 
@@ -184,24 +178,22 @@ This will:
 - construct k-NN graphs for each fold,
 - log validation and test R² for each configuration.
 
-### 3. Training the best GCN configuration
-
-python FosforGNN_Seed.py
+python FosforGNN_BestMetrics&Plots.py
 
 This script:
 
 - trains the GCN with the selected best hyperparameters,
 - saves loss curves and prediction/residual plots for validation and test data.
 
-### 4. Reproducing the CNN baseline
+### 3. Reproducing the CNN baseline
 
 python FosforCNN_GridSearch.py
-python FosforCNN_BestConfig.py
+python FosforCNN_BestMetrics&Plots.py
 
 The first script performs the CNN hyperparameter grid search,  
 the second trains the final CNN model and generates evaluation plots.
 
-### 5. Dataset figures and statistics
+### 4. Dataset figures and statistics
 
 To generate the dataset description figures used in the manuscript:
 
