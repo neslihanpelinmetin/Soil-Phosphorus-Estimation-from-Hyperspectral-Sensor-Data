@@ -3,7 +3,7 @@
 This repository contains the code accompanying the manuscript:
 
 > **"Investigating the Use of Graph Convolutional Networks on Soil Phosphorus Estimation from Hyperspectral Sensor Data"**  
-> Metin et al., 2024.
+> Metin et al., 2025.
 
 The goal is to predict soil phosphorus concentration from hyperspectral reflectance spectra (200–900 nm).  
 We compare a Graph Convolutional Network (GCN) with a 1D Convolutional Neural Network (CNN) baseline under a consistent preprocessing and evaluation pipeline:
@@ -221,7 +221,7 @@ to improve reproducibility of the reported results.
 If you use this code in your research, please cite the manuscript:
 
 ```bibtex
-@article{metin2024soilP_GCN,
+@article{metin2025soilP_GCN,
   author  = {Metin, Neslihan Pelin and Panahi, Nazila and Cimtay, Yucel},
   title   = {Investigating the Use of Graph Convolutional Networks on Soil Phosphorus Estimation from Hyperspectral Sensor Data},
   year    = {2025},
